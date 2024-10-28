@@ -1,0 +1,129 @@
+@font-face {
+  font-family: "specialElite";
+  src: url("./ressources/fonts/specialelite/SpecialElite.woff");
+}
+
+@font-face {
+  font-family: "cardo-bold";
+  src: url("./ressources/fonts/cardo/cardo-bold.woff");
+}
+@font-face {
+  font-family: "cardo-italic";
+  src: url("./ressources/fonts/cardo/cardo-italic.woff");
+}
+@font-face {
+  font-family: "cardo-regular";
+  src: url("./ressources/fonts/cardo/cardo-regular.woff");
+}
+/***********UTILS ***************/
+.italic {
+  font-family: "cardo-italic";
+}
+
+.bold {
+  font-family: "cardo-bold";
+}
+
+.td-dashed {
+  text-decoration: underline 1px dashed black;
+  text-underline-offset: 5px;
+}
+
+/****** LAYOUT **************/
+header,
+main,
+footer {
+  margin: auto;
+  max-width: 420px;
+}
+
+/* PSEUDO DECORATION */
+header::after {
+  content: "";
+  display: block;
+  width: 100%;
+  border-top: 2px solid black;
+}
+footer::before {
+  content: "";
+  display: block;
+  width: 100%;
+  border-top: 2px solid black;
+}
+
+footer::after {
+  content: "❦❦❦";
+  display: block;
+  margin-block: 3rem;
+  text-align: center;
+  font-size: 3rem;
+}
+
+h3::before {
+  content: "❧ ";
+}
+
+.quoted::before {
+  content: "«";
+}
+
+.quoted::after {
+  content: "»";
+}
+
+/** TEXT RULES */
+
+body {
+  font-size: default;
+  font-family: cardo-regular;
+}
+
+h1 {
+  font-size: 4em;
+  line-height: 2;
+}
+h2 {
+  font-size: 2.5em;
+  line-height: 1.2;
+}
+h3 {
+  font-size: 1.5em;
+  line-height: 1;
+}
+
+h1,
+h2,
+h3,
+.content p::first-letter {
+  font-family: specialElite;
+}
+
+h1,
+h2,
+.content p::first-letter {
+  text-transform: uppercase;
+}
+
+p {
+  text-align: justify;
+}
+
+/*********************
+ELEMENTS
+*********************/
+
+.big-quote {
+  font-family: cardo-italic;
+  font-weight: 600;
+  text-align: justify;
+}
+
+.big-quote + p {
+  text-align: center;
+}
+
+.content p::first-letter {
+  font-size: 2em;
+  float: left;
+  margin-right: 0.5rem;
+}
